@@ -1,7 +1,7 @@
 from twilio.rest import TwilioRestClient
 
-account = "ACCOUNT ID FROM TWILIO"
-token = "SECRET TOKEN FROM TWILIO"
+account = "TWILIO_ACCOUNT_ID"
+token = "TWILIO_SECRET_TOKEN"
 client = TwilioRestClient(account, token)
 
 from tkinter import *
@@ -26,7 +26,7 @@ class GUI:
 		text = self.text.get()
 		
 		for number in self.phoneNumbers:
-			message = client.messages.create(to=number, from_="+14045946266", body=text)
+			message = client.messages.create(to=number, from_="YOUR_TWILIO_NUMBER", body=text)
 			
 
 	def getFile(self):
