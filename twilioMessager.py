@@ -43,4 +43,4 @@ class GUI:
 window = Tk()
 window.title("Mass Text")
 GUI(window)
-windowainloop()
+window.mainloop()
